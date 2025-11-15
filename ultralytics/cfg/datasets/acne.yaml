@@ -1,0 +1,22 @@
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 7
+Class
+names: ['Bekas Jerawat', 'Blackhead', 'Nodule', 'Papules', 'Pori-Pori', 'Pustule', 'Whitehead']
+
+roboflow:
+  workspace: skripsijerawatviranti
+  project: acne_detection_2
+  version: 1
+  license: CC BY 4.0
+  # Download script/URL (optional)
+  url: https://universe.roboflow.com/skripsijerawatviranti/acne_detection_2/dataset/1
+
+
+
+
