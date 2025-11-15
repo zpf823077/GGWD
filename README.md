@@ -66,10 +66,13 @@ from ultralytics import YOLO
 model = YOLO("yolo11n.pt")
 
 # Train the model
-train_results = model.train(
-    data="coco8.yaml",  # path to dataset YAML
-    epochs=100,  # number of training epochs
-    imgsz=640,  # training image size
+model = YOLO(r"yolov11.yaml") \
+    .load(r'yolo11m.pt')  # build from YAML and transfer weights
+# Train the model
+results = model.train(
+    data=r"data.yaml",  # 自己数据集的类别
+    epochs=100,
+    batch=4,
     device="cpu",  # device to run on, i.e. device=0 or device=0,1,2,3 or device=cpu
 )
 
